@@ -1,0 +1,10 @@
+{
+	"config": 
+	{
+		"global": 
+		{
+			"url"		:		 "https://www.amazon.in/",
+			"browser"   :  		 "chrome"
+		}
+	}
+}
