@@ -21,7 +21,7 @@ public class BaseTest {
 	
 	@AfterMethod
 	public void tearDown() {
-		Browser.quitBrowser();
+	//	Browser.quitBrowser();
 	}
 	
 	

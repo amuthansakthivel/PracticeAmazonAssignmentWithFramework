@@ -1,6 +1,7 @@
 package com.companyname.browser;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +12,7 @@ import com.companyname.utils.JsonParser;
 
 public class Browser {
 
-	static WebDriver driver;
+	public static WebDriver driver;
 	//single- ton class ------> Single object class --->It will not allow you to create more than one object
 
 	private Browser() throws IOException {
@@ -30,9 +31,15 @@ public class Browser {
 			System.setProperty("webdriver.chrome.driver", Constants.CHROMEDRIVERPATH);
 			driver = new ChromeDriver(); //Ctrl+Shift+O
 		}
-		driver.get(JsonParser.getValue("config.global.url"));
+		
+		//modularise the codes
+		loadURL();
+		maximise();
+		setImplicitWait();
+		
 	}
 
+	
 	public static void initialise() throws IOException {
 		if(driver==null) {
 			new Browser(); //anonymous object    //Ctrl+A  //Ctrl+I
@@ -44,5 +51,20 @@ public class Browser {
 			driver.quit();
 		}
 	}
+	
+	private static void loadURL() throws IOException {
+		driver.get(JsonParser.getValue("config.global.url"));
+	}
+	
+	
+	private static void setImplicitWait() {
+		driver.manage().timeouts().implicitlyWait(Constants.IMPLICITWAITTIME, TimeUnit.SECONDS);
+	}
+
+	private static void maximise() {
+		driver.manage().window().maximize();
+		
+	}
+
 
 }

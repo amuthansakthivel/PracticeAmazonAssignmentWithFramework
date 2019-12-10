@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24019" started-at="2019-12-08T15:58:41Z" finished-at="2019-12-08T15:59:05Z">
+  <suite name="Default suite" duration-ms="37496" started-at="2019-12-10T14:58:10Z" finished-at="2019-12-10T14:58:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24019" started-at="2019-12-08T15:58:41Z" finished-at="2019-12-08T15:59:05Z">
-      <class name="com.companyname.tests.BaseTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.companyname.tests.BaseTest@239963d8]" name="setUp" is-config="true" duration-ms="23981" started-at="2019-12-08T15:58:41Z" finished-at="2019-12-08T15:59:05Z">
+    <test name="Default test" duration-ms="37496" started-at="2019-12-10T14:58:10Z" finished-at="2019-12-10T14:58:47Z">
+      <class name="com.companyname.tests.LaptopPageTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.companyname.tests.LaptopPageTests@3abbfa04]" name="setUp" is-config="true" duration-ms="21131" started-at="2019-12-10T14:58:10Z" finished-at="2019-12-10T14:58:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:com.companyname.tests.BaseTest@239963d8]" name="test1" duration-ms="12" started-at="2019-12-08T15:59:05Z" finished-at="2019-12-08T15:59:05Z">
+        <test-method status="PASS" signature="test1()[pri:0, instance:com.companyname.tests.LaptopPageTests@3abbfa04]" name="test1" duration-ms="16307" started-at="2019-12-10T14:58:31Z" finished-at="2019-12-10T14:58:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.companyname.tests.BaseTest@239963d8]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-12-08T15:59:05Z" finished-at="2019-12-08T15:59:05Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.companyname.tests.LaptopPageTests@3abbfa04]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-12-10T14:58:47Z" finished-at="2019-12-10T14:58:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.companyname.tests.BaseTest -->
+      </class> <!-- com.companyname.tests.LaptopPageTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
