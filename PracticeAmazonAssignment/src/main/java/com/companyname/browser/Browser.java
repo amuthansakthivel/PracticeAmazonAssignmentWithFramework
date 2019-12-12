@@ -12,7 +12,7 @@ import com.companyname.utils.JsonParser;
 
 public class Browser {
 
-	public static WebDriver driver;
+	private static WebDriver driver;
 	//single- ton class ------> Single object class --->It will not allow you to create more than one object
 
 	private Browser() throws IOException {
@@ -31,11 +31,12 @@ public class Browser {
 			System.setProperty("webdriver.chrome.driver", Constants.CHROMEDRIVERPATH);
 			driver = new ChromeDriver(); //Ctrl+Shift+O
 		}
-		
+		DriverManager.setDriver(driver);
 		//modularise the codes
 		loadURL();
 		maximise();
 		setImplicitWait();
+		
 		
 	}
 
@@ -47,22 +48,22 @@ public class Browser {
 	}
 
 	public static void quitBrowser() {
-		if(driver!=null) {
-			driver.quit();
+		if(DriverManager.getDriver()!=null) {
+			DriverManager.getDriver().quit();
 		}
 	}
 	
 	private static void loadURL() throws IOException {
-		driver.get(JsonParser.getValue("config.global.url"));
+		DriverManager.getDriver().get(JsonParser.getValue("config.global.url"));
 	}
 	
 	
 	private static void setImplicitWait() {
-		driver.manage().timeouts().implicitlyWait(Constants.IMPLICITWAITTIME, TimeUnit.SECONDS);
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Constants.IMPLICITWAITTIME, TimeUnit.SECONDS);
 	}
 
 	private static void maximise() {
-		driver.manage().window().maximize();
+		DriverManager.getDriver().manage().window().maximize();
 		
 	}
 

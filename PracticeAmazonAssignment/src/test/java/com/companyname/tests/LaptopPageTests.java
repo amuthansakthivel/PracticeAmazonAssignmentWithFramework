@@ -18,5 +18,22 @@ public class LaptopPageTests extends BaseTest{
 		laptoppage=homepage.clickHamburgerMenu().navigateToLaptopPage();
 		laptoppage.chooseAppleFilter().sortByPrice();
 	}
+	
+	
+	@Test
+	public void test2() throws IOException {
+		homepage= new HomePage();
+		laptoppage=homepage.clickHamburgerMenu().navigateToLaptopPage();
+		laptoppage.chooseAppleFilter().sortByPrice();
+	}
+
+	
+	@Test
+	public void test3() throws IOException {
+		homepage= new HomePage();
+		laptoppage=homepage.clickHamburgerMenu().navigateToLaptopPage();
+		laptoppage.chooseAppleFilter().sortByPrice();
+	}
+
 
 }
